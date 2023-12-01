@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
 const privatechat = () => {
 
+    const [chats, setChats] = useState([])
+
     const fetchChats = async () => {
 
-        const data = await axios.get("http://localhost:5000/api/chat");
-        console.log(data);
+        const { data } = await axios.get("http://localhost:5000/api/chat");
+        setChats(data);
     }
 
     useEffect(() => {
@@ -17,7 +19,7 @@ const privatechat = () => {
 
     return (
         <div>
-            <h1>Hello, privatechat!</h1>
+            {chats.map()}
         </div>
     );
 };
