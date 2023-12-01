@@ -1,16 +1,20 @@
 const express = require("express");
 const { chats } = require("./data/data");
 const dotenv = require("dotenv");
+const cors = require("cors"); 
 
 const app = express();
 dotenv.config();
 
-app.get('/', (req, res) => {
+// Enable CORS for all routes
+app.use(cors());
+
+app.get('/', (_req, res) => {
 
     res.send("API is running successfully");
 });
 
-app.get("/api/chat", (req, res) => {
+app.get("/api/chat", (_req, res) => {
 
     res.send(chats);
 });
