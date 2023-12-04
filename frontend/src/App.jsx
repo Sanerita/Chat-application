@@ -13,8 +13,9 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/homePage" element={<HomePage />} />{" "}
         <Route path="/loginPage" element={<LoginPage />} />
-        <Route path="/privatechat" element={<Privatechat />} />
+        <Route path="/chats" element={<Privatechat />} />
         <Route path="/groupchat" element={<Groupchat />} />
+        <Route path="/Privatechat" component={<Privatechat />} />
       </Routes>
     </Router>
   );
