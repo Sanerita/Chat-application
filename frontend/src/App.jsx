@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/landingPages";
 import HomePage from "./pages/homePage";
 import LoginPage from "./pages/loginPage";
-import Privatechat from "./pages/privatechat";
+import ChatPage from "./pages/chatPage";
 import Groupchat from "./pages/groupchat";
 
 const App = () => {
@@ -13,9 +13,9 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/homePage" element={<HomePage />} />{" "}
         <Route path="/loginPage" element={<LoginPage />} />
-        <Route path="/chats" element={<Privatechat />} />
+        <Route path="/chats" element={<ChatPage />} />
         <Route path="/groupchat" element={<Groupchat />} />
-        <Route path="/Privatechat" component={<Privatechat />} />
+        <Route path="/chatPage" component={<chatPage />} />
       </Routes>
     </Router>
   );

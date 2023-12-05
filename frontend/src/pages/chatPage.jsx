@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
-const PrivateChat = () => {
+const chatPage = () => {
     const [chats, setChats] = useState([]);
 
     const fetchChats = async () => {
@@ -33,4 +33,4 @@ const PrivateChat = () => {
     );
 };
 
-export default PrivateChat;
+export default chatPage;
