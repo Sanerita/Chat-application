@@ -12,7 +12,7 @@ const chatPage = () => {
             }
         } catch (error) {
             console.error("Error fetching chats:", error);
-            // Handle error: You might want to set an error state here or perform some other action
+
         }
     };
 
