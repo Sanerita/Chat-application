@@ -1,7 +1,11 @@
-import { Box, Flex, Input, Button, Image } from "@chakra-ui/react";
+import { Box, Flex, Input, Button, Image, Stack, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
+import { FaSearch } from "react-icons/fa";
+// import { useMediaQuery } from "@chakra-ui/react";
 
 const LandingPage = () => {
+  const [isSmallerThan768] = useMediaQuery("(max-width: 768px)");
+
   const handleSearchClick = () => {
     // Add logic for when the search bar is clicked
     console.log("Search bar clicked!");
@@ -11,6 +15,8 @@ const LandingPage = () => {
     // Add logic for when the sign-in button is clicked
     console.log("Sign-in button clicked!");
   };
+  const videoWidth = "100%";
+  const videoHeight = isSmallerThan768 ? "100vh" : "100%";
 
   return (
     <Box
@@ -20,14 +26,15 @@ const LandingPage = () => {
       overflow="hidden"
       zIndex="-1"
 
+
     >
       <video
         autoPlay
         muted
         loop
         style={{
-          width: "100%",
-          height: "100%",
+          width: videoWidth,
+          height: videoHeight,
           objectFit: "cover",
         }}
       >
@@ -48,27 +55,42 @@ const LandingPage = () => {
         p={4}
         bg="rgba(136, 216, 192, 0.8)"
         zIndex="1"
+        width="navbarWidth"
+        height={isSmallerThan768 ? "60px" : "80px"}
       >
-        <Box top="0" left="10" alignItems="center" justifyContent="space-between" bgSize="50p">
+        <Box top="0" left="20" alignItems="center" >
           <Image
             src="./src/assets/TOAST-removebg-preview.png"
             alt="Logo"
-            boxSize="60px"
-            maxW="60px"
-            maxH="5060px"
-
+            boxSize="10vh"
+            maxW="60PX"
+            maxH="60PX"
           />
-
         </Box>
-        <Box onClick={handleSearchClick}>
+        <Stack direction="row" display="flex" justifyContent="space-between" alignItems="center" gap="50" >
 
-          <Input placeholder="Search..." mx="auto" />
+          {isSmallerThan768 ? (
+            <Box onClick={handleSearchClick}>
+              <FaSearch style={{ cursor: "pointer" }} />
+            </Box>
+          ) : (
+            <Input placeholder="Search..." mx="auto" />
+          )}
 
-        </Box>
-        <Button variant="outline" mr={4} bg="#246E58" onClick={handleSignInClick}>
+        </Stack>
+        <Button
+          variant="outline"
+          colorScheme="246E58"
+          mr={4}
+          bg="#246E58"
+          onClick={handleSignInClick}
+          cursor="pointer"
+          size={isSmallerThan768 ? "sm" : "md"} // Adjust button size for smaller screens
+        >
           Sign In as Guest
         </Button>
       </Flex >
+
       <Box
         position="absolute"
         top="50%"
