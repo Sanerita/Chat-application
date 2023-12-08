@@ -1,7 +1,7 @@
-import { Box, Flex, Input, Button, Image, Stack, useMediaQuery } from "@chakra-ui/react";
+import { Box, Flex, Input, Button, Image, Stack, useMediaQuery, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import React from "react";
 import { FaSearch } from "react-icons/fa";
-// import { useMediaQuery } from "@chakra-ui/react";
+
 
 const LandingPage = () => {
   const [isSmallerThan768] = useMediaQuery("(max-width: 768px)");
@@ -24,7 +24,7 @@ const LandingPage = () => {
       width="100%"
       height="100%"
       overflow="hidden"
-      zIndex="-1"
+    // zIndex="-1"
 
 
     >
@@ -80,7 +80,7 @@ const LandingPage = () => {
         </Stack>
         <Button
           variant="outline"
-          colorScheme="246E58"
+          // colorScheme="246E58"
           mr={4}
           bg="#246E58"
           onClick={handleSignInClick}
@@ -90,18 +90,52 @@ const LandingPage = () => {
           Sign In as Guest
         </Button>
       </Flex >
+      <Stack justifyContent="center" alignItems="center" zIndex="-1">
+        <Box
+          position="absolute"
+          display="flex"
+          justifyContent="center"
+          p={3}
+          top="60%"
+          bg="white"
+          width="50%"
+          m="5 50px 20px 20px"
+          borderRadius="1g"
+          borderWidth="1px"
+        >
+          <Text fontSize="4xl" fontFamily="Work sans" color="black">TOAST</Text>
+        </Box>
+        <Box
+          bg="white"
+          w="100%"
+          p={4}
+          borderRadius="1g"
+          borderWidth="1px"
+          position="absolute"
+          top="70%"
+          width="50%"
+          display="flex"
+          justifyContent="center"
+          textColor="black"
+        >
+          <Tabs variant='soft-rounded' colorScheme='green'>
+            <TabList>
+              <Tab>Tab 1</Tab>
+              <Tab>Tab 2</Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
+                <p>one!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>two!</p>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+          {/* Additional content */}
+        </Box>
+      </Stack >
 
-      <Box
-        position="absolute"
-        top="50%"
-        left="50%"
-        transform="translate(-50%, -50%)"
-      /* Additional styling for your content */
-      >
-        {/* Your landing page content goes here */}
-        <h1>Landing Page</h1>
-        {/* ... */}
-      </Box>
     </Box >
   );
 };

@@ -3,15 +3,14 @@
 .App{
 min-height: 100vh;
 display: flex;
-background-image: url("./assets/bg-vidio.mp4");
+
 
 }
 
 .login{
 min-height: 100vh;
 display: flex;
-background-image: url("./assets/bg-vidio.mp4");
-background-position: auto;
+
 }
 
 .landingPage{
