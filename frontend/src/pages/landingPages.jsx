@@ -82,12 +82,11 @@ const LandingPage = () => {
         </Stack>
         <Button
           variant="outline"
-          // colorScheme="246E58"
           mr={4}
           bg="#246E58"
           onClick={handleSignInClick}
           cursor="pointer"
-          size={isSmallerThan768 ? "sm" : "md"} // Adjust button size for smaller screens
+          size={isSmallerThan768 ? "sm" : "md"} // button size for smaller screens
         >
           Sign In as Guest
         </Button>
