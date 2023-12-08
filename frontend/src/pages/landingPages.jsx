@@ -118,10 +118,10 @@ const LandingPage = () => {
           justifyContent="center"
           textColor="black"
         >
-          <Tabs variant='soft-rounded' colorScheme='green'>
-            <TabList>
-              <Tab>Tab 1</Tab>
-              <Tab>Tab 2</Tab>
+          <Tabs variant='soft-rounded' >
+            <TabList >
+              <Tab width="30vh"> Login</Tab>
+              <Tab width="30vh">Sign Up</Tab>
             </TabList>
             <TabPanels>
               <TabPanel>
