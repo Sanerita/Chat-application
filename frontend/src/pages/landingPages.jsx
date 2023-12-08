@@ -1,6 +1,8 @@
 import { Box, Flex, Input, Button, Image, Stack, useMediaQuery, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import Login from '../components/Authentication/Login';
+import SignUp from "../components/Authentication/SignUp";
 
 
 const LandingPage = () => {
@@ -119,15 +121,17 @@ const LandingPage = () => {
           textColor="black"
         >
           <Tabs variant='soft-rounded' >
-            <TabList >
+            <TabList mb="1em">
               <Tab width="30vh"> Login</Tab>
               <Tab width="30vh">Sign Up</Tab>
             </TabList>
             <TabPanels>
               <TabPanel>
                 <p>one!</p>
+                <Login />
               </TabPanel>
               <TabPanel>
+                <SignUp />
                 <p>two!</p>
               </TabPanel>
             </TabPanels>
