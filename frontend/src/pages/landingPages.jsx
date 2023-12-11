@@ -20,6 +20,7 @@ const LandingPage = () => {
   const videoWidth = "100%";
   const videoHeight = isSmallerThan768 ? "100vh" : "100%";
 
+
   return (
     <Box
       position="relative"
@@ -91,18 +92,22 @@ const LandingPage = () => {
           Sign In as Guest
         </Button>
       </Flex >
-      <Stack justifyContent="center" alignItems="center" zIndex="-1">
+      {/* sign in and sign up section */}
+      <Stack justifyContent="center" alignItems="center" zIndex="-1" >
         <Box
           position="absolute"
           display="flex"
           justifyContent="center"
           p={3}
-          top="60%"
           bg="white"
-          width="50%"
           m="5 50px 20px 20px"
           borderRadius="1g"
           borderWidth="1px"
+          mx={{ base: "5%", md: "20px" }}
+          width={{ base: "90%", md: "50%" }}
+          top={{ base: "70%", md: "60%" }}
+          mt={{ base: "-60px", md: "0" }}
+
         >
           <Text fontSize="4xl" fontFamily="Work sans" color="black">TOAST</Text>
         </Box>
@@ -113,16 +118,19 @@ const LandingPage = () => {
           borderRadius="1g"
           borderWidth="1px"
           position="absolute"
-          top="70%"
-          width="50%"
           display="flex"
           justifyContent="center"
           textColor="black"
+          width={{ base: "90%", md: "50%" }}
+          top={{ base: "70%", md: "70%" }}
+          mx={{ base: "5%", md: "20px" }}
+          mt={{ base: "40px", md: "0" }}
         >
-          <Tabs variant='soft-rounded' >
-            <TabList mb="1em">
-              <Tab width="30vh"> Login</Tab>
-              <Tab width="30vh">Sign Up</Tab>
+          <Tabs variant='soft-rounded'
+          >
+            <TabList mb="1em" justifyContent="space-around">
+              <Tab width={{ base: "30vw", md: "30vh" }}> Login</Tab>
+              <Tab width={{ base: "30vw", md: "30vh" }}>Sign Up</Tab>
             </TabList>
             <TabPanels>
               <TabPanel>
