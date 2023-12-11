@@ -1,10 +1,16 @@
+import { FormControl, FormLabel, VStack } from '@chakra-ui/react'
 import React from 'react'
 
 const SignUp = () => {
     return (
-        <div>
+        <VStack spacing="5px">
 
-        </div>
+            <FormControl>
+                <FormLabel></FormLabel>
+                <Input></Input>
+
+            </FormControl>
+        </VStack >
     )
 }
 

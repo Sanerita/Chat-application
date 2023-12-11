@@ -134,12 +134,10 @@ const LandingPage = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <p>one!</p>
                 <Login />
               </TabPanel>
               <TabPanel>
                 <SignUp />
-                <p>two!</p>
               </TabPanel>
             </TabPanels>
           </Tabs>
