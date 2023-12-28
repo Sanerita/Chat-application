@@ -42,7 +42,7 @@ const LandingPage = () => {
         }}
       >
         <source
-          src="./src/assets/CHAT-WITH.mp4"
+          src="./src/assets/FRIENDS.mp4"
           type="video/mp4"
           quality="hd720"
         />
