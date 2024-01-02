@@ -6,9 +6,12 @@ import HomePage from "./pages/homePage";
 import LoginPage from "./pages/loginPage";
 import ChatPage from "./pages/chatPage";
 import Groupchat from "./pages/groupchat";
+import theme from "../src/theme";
+import { ChakraProvider } from '@chakra-ui/react';
 
 const App = () => {
   return (
+    <ChakraProvider theme={theme}>
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -19,6 +22,7 @@ const App = () => {
         <Route path="/chatPage" component={<chatPage />} />
       </Routes>
     </Router>
+    </ChakraProvider>
   );
 };
 export default App;

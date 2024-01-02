@@ -1,20 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
 
-.App{
-min-height: 100vh;
-display: flex;
+/* .App {
+  min-height: 100vh;
+  background-color: brown;
+} */
 
-
+ .login {
+  min-height: 100vh;
+  display: flex;
 }
 
-.login{
-min-height: 100vh;
-display: flex;
-
-}
-
-.landingPage{
-min-height: 100vh;
-display: flex;
-background-position: auto;
-}
+.landingPage {
+  min-height: 100vh;
+  display: flex; 
+  background-position: auto;
+background-color: brown;
+} 
+/* .landingPage{
+  
+  background-color: #d2d2d2;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: monaco, courier;
+    background: linear-gradient(-45deg, #fff, #1d1680, #269cc7, #fff);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+} */

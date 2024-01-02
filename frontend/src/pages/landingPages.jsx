@@ -1,8 +1,9 @@
-import { Box, Flex, Input, Button, Image, Stack, useMediaQuery, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { Box, Flex, Input, Button, Image, Stack, useMediaQuery, Text, Tabs, TabList, TabPanels, Tab, TabPanel, Container } from "@chakra-ui/react";
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import Login from '../components/Authentication/Login';
 import SignUp from "../components/Authentication/SignUp";
+
 
 
 const LandingPage = () => {
@@ -17,37 +18,38 @@ const LandingPage = () => {
     // Add logic for when the sign-in button is clicked
     console.log("Sign-in button clicked!");
   };
-  const videoWidth = "100%";
-  const videoHeight = isSmallerThan768 ? "100vh" : "100%";
 
 
   return (
-    <Box
-      position="relative"
+    <Container landingPage
+      // position="relative"
       width="100%"
       height="100%"
-      overflow="hidden"
+    //   overflow="hidden"
     // zIndex="-1"
-
-
+    
+      h="100vh"
+      // minW={100}
+      // display="flex"
+      
+      // background="linear-gradient(-45deg, #fff, #1d1680, #269cc7, #fff)"
+      // backgroundSize="400% 400%"
+      // animation="gradient 10s ease infinite"
+      // sx={{
+      //   '@keyframes gradient': {
+      //     '0%': {
+      //       backgroundPosition: '0% 50%',
+      //     },
+      //     '50%': {
+      //       backgroundPosition: '100% 50%',
+      //     },
+      //     '100%': {
+      //       backgroundPosition: '0% 50%',
+      //     },
+      //   },
+      // }}
     >
-      <video
-        autoPlay
-        muted
-        loop
-        style={{
-          width: videoWidth,
-          height: videoHeight,
-          objectFit: "cover",
-        }}
-      >
-        <source
-          src="./src/assets/FRIENDS.mp4"
-          type="video/mp4"
-          quality="hd720"
-        />
-        Your browser does not support the video tag.
-      </video>
+    {/* navbar */}
       <Flex
         position="fixed"
         top="0"
@@ -73,9 +75,9 @@ const LandingPage = () => {
         <Stack direction="row" display="flex" justifyContent="space-between" alignItems="center" gap="50" >
 
           {isSmallerThan768 ? (
-            <Box onClick={handleSearchClick}>
-              <FaSearch style={{ cursor: "pointer" }} />
-            </Box>
+            <Container onClick={handleSearchClick}>
+              <FaSearch style={{ cursor: "pointer" }} ></FaSearch>
+            </Container>
           ) : (
             <Input placeholder="Search..." mx="auto" />
           )}
@@ -92,9 +94,11 @@ const LandingPage = () => {
           Sign In as Guest
         </Button>
       </Flex >
+
+
       {/* sign in and sign up section */}
       <Stack justifyContent="center" alignItems="center" zIndex="-1" >
-        <Box
+        <Container
           position="absolute"
           display="flex"
           justifyContent="center"
@@ -105,13 +109,13 @@ const LandingPage = () => {
           borderWidth="1px"
           mx={{ base: "5%", md: "20px" }}
           width={{ base: "90%", md: "50%" }}
-          top={{ base: "70%", md: "60%" }}
+          top={{ base: "50%", md: "38%" }}
           mt={{ base: "-60px", md: "0" }}
 
         >
           <Text fontSize="4xl" fontFamily="Work sans" color="black">TOAST</Text>
-        </Box>
-        <Box
+        </Container>
+        <Container
           bg="white"
           w="100%"
           p={4}
@@ -122,7 +126,7 @@ const LandingPage = () => {
           justifyContent="center"
           textColor="black"
           width={{ base: "90%", md: "50%" }}
-          top={{ base: "70%", md: "70%" }}
+          top={{ base: "70%", md: "45%" }}
           mx={{ base: "5%", md: "20px" }}
           mt={{ base: "40px", md: "0" }}
         >
@@ -142,10 +146,10 @@ const LandingPage = () => {
             </TabPanels>
           </Tabs>
           {/* Additional content */}
-        </Box>
+        </Container>
       </Stack >
 
-    </Box >
+    </Container>
   );
 };
 
