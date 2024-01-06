@@ -44,7 +44,7 @@ const SignUp = () => {
                 />
 
                 <InputRightElement width="4.5rem">
-                <Button h="1.75rem" size="sm" onClick={handleClick}>
+                <Button h="1.75rem" size="sm" onClick={handleClick} bg="#88d8c0">
 
                    {show ? "hide" : "show"}
                 </Button>
@@ -62,7 +62,7 @@ const SignUp = () => {
                 />
 
                 <InputRightElement width="4.5rem">
-                <Button h="1.75rem" size="sm" onClick={handleClick}>
+                <Button h="1.75rem" size="sm" onClick={handleClick} bg="#88d8c0">
 
                    {show ? "hide" : "show"}
                 </Button>
