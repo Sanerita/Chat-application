@@ -12,7 +12,8 @@ const SignUp = () => {
      const [pic, setPic] = useState();
 
     const handleClick = ()=> setShow(!show)
-    const postDetails =(pics) => {};
+    const postDetails = (pics) => {};
+    const submitHandler =() =>{};
 
     return (
         <VStack spacing="5px">
@@ -77,8 +78,16 @@ const SignUp = () => {
                 accept='image/*'
                 onChange={(e) => postDetails(e.target.files[0])}
                 />
-
             </FormControl>
+
+            <Button
+            bg="#88d8c0"
+            width="100%"
+            style={{marginTop: 15 }}
+            onClick={submitHandler}
+            >
+             Sign Up
+            </Button>
 
         </VStack >
     )
