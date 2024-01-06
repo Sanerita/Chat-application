@@ -12,6 +12,7 @@ const SignUp = () => {
      const [pic, setPic] = useState();
 
     const handleClick = ()=> setShow(!show)
+    const postDetails =(pics) => {};
 
     return (
         <VStack spacing="5px">
@@ -55,7 +56,7 @@ const SignUp = () => {
                 <InputGroup>
                 <Input
                 type={show? "text":"confirmPassword"}
-                placeholder='confirm Password...'
+                placeholder='Confirm Password...'
                 onChange={(e)=> setConfirmPassword(e.target.value)}
                 />
 
@@ -66,6 +67,17 @@ const SignUp = () => {
                 </Button>
                 </InputRightElement>
                 </InputGroup>
+            </FormControl>
+
+            <FormControl id='pic'>
+                <FormLabel>Upload your Picture</FormLabel>
+                <Input  
+                type='file'
+                p={1.5}
+                accept='image/*'
+                onChange={(e) => postDetails(e.target.files[0])}
+                />
+
             </FormControl>
 
         </VStack >

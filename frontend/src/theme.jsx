@@ -4,7 +4,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        background: 'linear-gradient(-45deg, #fff, #1d1680, #269cc7, #fff)',
+        background: 'linear-gradient(-45deg, #38ac89, #2c876b, #143d31)',
         backgroundSize: '400% 400%',
         animation: 'gradient 10s ease infinite',
         '@keyframes gradient': {
