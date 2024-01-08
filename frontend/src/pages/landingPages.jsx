@@ -3,8 +3,7 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import Login from '../components/Authentication/Login';
 import SignUp from "../components/Authentication/SignUp";
-// import toastImage from '../assets/TOAST-removebg-preview.png';
-// import { Image } from '@chakra-ui/react'
+
 
 const LandingPage = () => {
   const [isSmallerThan768] = useMediaQuery("(max-width: 768px)");
@@ -64,7 +63,10 @@ const LandingPage = () => {
           variant="outline"
           mr={4}
           bg="#246E58"
-          onClick={handleSignInClick}
+          onClick={()=> {
+            setEmail("guest@example.com")
+            setPassword("123456")
+          }}
           cursor="pointer"
           size={isSmallerThan768 ? "sm" : "md"} // button size for smaller screens
         >
